@@ -154,19 +154,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Element-UI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Vue单文件组件的基本用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Element-UI/">Element-UI</a>
+      <a class="article-title" href="/2020/04/16/Vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">Vue单文件组件的基本用法</a>
     </h1>
   
 
         
-        <a href="/2020/04/16/Element-UI/" class="archive-article-date">
+        <a href="/2020/04/16/Vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="archive-article-date">
   	<time datetime="2020-04-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
 </a>
         
@@ -174,10 +174,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>安装依赖包npm i element-ui -S</span><br><span class="line"><span class="number">2.</span>导入 Element-UI相关资源</span><br><span class="line"><span class="comment">//导入组件库</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span>;</span><br><span class="line"><span class="comment">//导入组件相关样式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span>;</span><br><span class="line"><span class="comment">//配置Vue插件</span></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
+        <p>​        <strong>单文件组件的组成结构</strong></p>
+<p>​            -template 组件的模板区域</p>
+<p>​            -script  业务逻辑区域</p>
+<p>​            -style 样式区域</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;!-- 这里用于定义Vue组件的模板内容 --&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">&#x2F;&#x2F;这里用于定义Vue组件的业务逻辑</span><br><span class="line">export default &#123;</span><br><span class="line">  data () &#123; return &#123;&#125; &#125;,&#x2F;&#x2F;私有数据</span><br><span class="line">  methods:&#123;&#125;&#x2F;&#x2F;处理函数</span><br><span class="line">  &#x2F;&#x2F; ...其它业务逻辑</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&#x2F;* 这里用于定义组件的样式*&#x2F;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-
+        
+          <a class="article-more-a" href="/2020/04/16/Vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/#more">more >></a>
+        
       
 
       
@@ -190,7 +196,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Element-UI</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-vue</a>
         		</li>
       		
 		</ul>
@@ -200,7 +206,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Element-UI/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/04/16/Vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -663,6 +669,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">-Element-UI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -671,7 +681,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">-Element-UI</a>
+                <a href="javascript:void(0)" class="js-tag color5">-vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -679,15 +689,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">-vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">-vue-cli</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-webpack</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-vue-cli</a>
               </li>
              
               <li class="article-tag-list-item">
