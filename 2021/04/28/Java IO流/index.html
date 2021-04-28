@@ -16,7 +16,7 @@
 <meta property="og:description" content="一、流的继承体系1234567891011121314151617181920&#x2F;*	|----IO		|----InputStream：字节输入流			|--ByteArrayInputStream			|--PipedInputStream			|--FilterInputStream				|-BufferInputStream :处理流				|-DataInputStream:处理流">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-28T15:38:04.000Z">
+<meta property="article:modified_time" content="2021-04-28T15:40:39.103Z">
 <meta property="article:author" content="吃土长大的">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -178,6 +178,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="一、流的继承体系"><a href="#一、流的继承体系" class="headerlink" title="一、流的继承体系"></a>一、流的继承体系</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	|----IO</span></span><br><span class="line"><span class="comment">		|----InputStream：字节输入流</span></span><br><span class="line"><span class="comment">			|--ByteArrayInputStream</span></span><br><span class="line"><span class="comment">			|--PipedInputStream</span></span><br><span class="line"><span class="comment">			|--FilterInputStream</span></span><br><span class="line"><span class="comment">				|-BufferInputStream :处理流</span></span><br><span class="line"><span class="comment">				|-DataInputStream:处理流</span></span><br><span class="line"><span class="comment">            |--FileInputStream</span></span><br><span class="line"><span class="comment">            	|-File</span></span><br><span class="line"><span class="comment">            	|-FileDescriptor</span></span><br><span class="line"><span class="comment">            |--ObjectInputStream</span></span><br><span class="line"><span class="comment">            </span></span><br><span class="line"><span class="comment">		|----OutputStream:字节输出流</span></span><br><span class="line"><span class="comment">		</span></span><br><span class="line"><span class="comment">		|----Reader:字符输入流</span></span><br><span class="line"><span class="comment">		|----Writer:字符输出流</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">在java中，为了对不同来源和性质的流对象调用统一的方法，java中的流首先定义了顶层输入/输出流的接口或抽象类，这样不同性质具体的流对象就会有统一的调用方法以便使用，在使用流对象时，尽量的按照在具体流所实现的接口（抽象类）中定义的方法使用。</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
 
 <h4 id="二、流的分类"><a href="#二、流的分类" class="headerlink" title="二、流的分类"></a><strong>二、流的分类</strong></h4><p>​        流按照流向数据流向可以分为输入流和输出流。</p>
 <p>​        流按照处理数据类型的单位不同可以分为字节流和字符流。</p>
