@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript学习 | (&gt;‿◠)✌</title>
+  <title>EL&amp;JSTL笔记 | (&gt;‿◠)✌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12javaScript的组成     1.ECMAscript  2.BOM  3.DOM  1234562.js 和 html的结合方式     第一种:使用一个标签&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;js代码 &lt;&#x2F;script&gt;     第二种:使用script标签,引入一个外部的js文件           ***创建一个js文件,写js代">
+  <meta name="description" content="JSP1.  指令     *  作用：用于配置JSP页面，导入资源文件     *  格式：         &lt;%@ 指令名称  属性名1&#x3D;属性值1  属性值2&#x3D;属性值2 ... %&gt;     *   分类：         1.  page  ：配置JSP页面的             *  contentType：等同于response.setContentType()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript学习">
-<meta property="og:url" content="http://yoursite.com/2020/04/13/JavaScript%E5%AD%A6%E4%B9%A0-1/index.html">
+<meta property="og:title" content="EL&amp;JSTL笔记">
+<meta property="og:url" content="http://yoursite.com/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="(&gt;‿◠)✌">
-<meta property="og:description" content="12javaScript的组成     1.ECMAscript  2.BOM  3.DOM  1234562.js 和 html的结合方式     第一种:使用一个标签&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;js代码 &lt;&#x2F;script&gt;     第二种:使用script标签,引入一个外部的js文件           ***创建一个js文件,写js代">
+<meta property="og:description" content="JSP1.  指令     *  作用：用于配置JSP页面，导入资源文件     *  格式：         &lt;%@ 指令名称  属性名1&#x3D;属性值1  属性值2&#x3D;属性值2 ... %&gt;     *   分类：         1.  page  ：配置JSP页面的             *  contentType：等同于response.setContentType()">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-13T10:17:08.000Z">
-<meta property="article:modified_time" content="2020-04-19T02:50:09.491Z">
+<meta property="article:published_time" content="2021-04-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-29T14:34:31.639Z">
 <meta property="article:author" content="吃土长大的">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="EL&amp;JSTL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="(&gt;‿◠)✌" type="application/atom+xml">
@@ -157,87 +157,157 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-JavaScript学习-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-EL&amp;JSTL笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript学习
+      EL&amp;JSTL笔记
     </h1>
   
 
         
-        <a href="/2020/04/13/JavaScript%E5%AD%A6%E4%B9%A0-1/" class="archive-article-date">
-  	<time datetime="2020-04-13T10:17:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
+        <a href="/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-04-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javaScript的组成</span><br><span class="line">     1.ECMAscript  2.BOM  3.DOM</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.</span>js 和 html的结合方式</span><br><span class="line">     第一种:使用一个标签&lt;script type=<span class="string">"text/javascript"</span>&gt;js代码 &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">     第二种:使用script标签,引入一个外部的js文件</span></span><br><span class="line"><span class="regexp">           ***创建一个js文件,写js代码</span></span><br><span class="line"><span class="regexp">           - &lt;script type="text/</span>javascript<span class="string">" src="</span><span class="number">1.</span>js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">     **使用第二种方式时候，就不要在script标签里面写js代码了，不会执行</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span>js的原始类型和声明变量</span><br><span class="line">          **java的基本数据类型 byte short int long float double char boolean</span><br><span class="line">          **定义变量 都使用关键字<span class="keyword">var</span></span><br><span class="line">          **js的原始类型(五个)</span><br><span class="line">             -string:字符串</span><br><span class="line">                  ***<span class="keyword">var</span> str = <span class="string">"abc"</span>;</span><br><span class="line">             -number:数字类型</span><br><span class="line">                  ***<span class="keyword">var</span> m = <span class="number">123</span>;</span><br><span class="line">             -boolean: <span class="literal">true</span>和<span class="literal">false</span></span><br><span class="line">                  ***<span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line">             -<span class="literal">null</span></span><br><span class="line">                   ***<span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">                   ***获取对象的引用，<span class="literal">null</span>表示对象引用为空，所有对象的引用也是object</span><br><span class="line">             -undifined</span><br><span class="line">                   ***定义一个变量，没有赋值</span><br><span class="line">                   ***<span class="keyword">var</span> aa;</span><br><span class="line">           **<span class="keyword">typeof</span>();查看当前变量的数据类型</span><br></pre></td></tr></table></figure>
-
-<a id="more"></a>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">4.js的语句</span><br><span class="line">      -java里面的语句：</span><br><span class="line">           **if判断</span><br><span class="line">           **switch语句</span><br><span class="line">           **循环 for while do-while</span><br><span class="line">      -js里面的这些语句</span><br><span class="line">           **if判断语句</span><br><span class="line">                *** &#x3D;:表示赋值</span><br><span class="line">                *** &#x3D;&#x3D;:表示判断</span><br><span class="line">           **swithc语句</span><br><span class="line">                 -java里面都支持</span><br><span class="line">                 -switch(a)&#123;</span><br><span class="line">                        case 5:</span><br><span class="line">                             break;</span><br><span class="line">                        case 6:</span><br><span class="line">                             break;</span><br><span class="line">                        default:</span><br><span class="line">                        ......</span><br><span class="line">                 &#125;</span><br><span class="line">           **循环语句 for while do-while</span><br><span class="line">                    -while循环</span><br><span class="line">                    ****var i &#x3D; 5;</span><br><span class="line">                    while(i&gt;1)&#123;</span><br><span class="line">                       alert(i);</span><br><span class="line">                       i--;</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                    -for循环</span><br><span class="line">                    ***for(int i&#x3D;0; i&lt;&#x3D;10; i++)&#123;&#125;</span><br><span class="line">                    for(var mm &#x3D; 0;mm&lt;&#x3D;3;mm++)&#123;</span><br><span class="line">                        alert(mm);</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                **i++  ++i和java里面的一样</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5.</span>js运算符</span><br><span class="line">   **+=    :   x+=y;  ====&gt;  x=x+y;</span><br><span class="line">   **js里面不区分整数和小数</span><br><span class="line">         <span class="keyword">var</span> j = <span class="number">123</span>;</span><br><span class="line">         alert(j/<span class="number">1000</span>*<span class="number">1000</span>);</span><br><span class="line">         <span class="comment">//在java里面得到的结果就是0</span></span><br><span class="line">         <span class="comment">//在js里面不区分整数和小数，123/1000=0.123 * 1000=123</span></span><br><span class="line">   **字符串的相加和相减的操作</span><br><span class="line">          <span class="keyword">var</span> str = <span class="string">"123"</span>;</span><br><span class="line">          ** 如果相加时候，做是字符串连接</span><br><span class="line">          ** 如果相减，做的是相减的运算</span><br><span class="line">          </span><br><span class="line">           *<span class="comment">//字符串的操作</span></span><br><span class="line">               <span class="keyword">var</span> str = <span class="string">"456"</span>;</span><br><span class="line">               <span class="comment">//alert(str+1);  //在java里面操作的结果就是4561，在js中还是4561</span></span><br><span class="line">               alert(str<span class="number">-1</span>);  <span class="comment">//相减时候，执行减法的运算</span></span><br><span class="line">           *提示<span class="literal">NaN</span>：表示不是一个数字</span><br><span class="line">  **boolean类型也可以操作</span><br><span class="line">          ***如果设置成<span class="literal">true</span>，想当于这个值是<span class="number">1</span></span><br><span class="line">          ***如果设置成<span class="literal">false</span>，相当于这个值是<span class="number">0</span></span><br><span class="line">  **== 和 ===区别</span><br><span class="line">          **做判断</span><br><span class="line">          **==比较的只是值</span><br><span class="line">          **===比较的是值和类型</span><br><span class="line">  **引入知识</span><br><span class="line">         直接向页面输出的语句</span><br><span class="line">         *<span class="built_in">document</span>.write(<span class="string">"aaaa"</span>);</span><br><span class="line">          <span class="built_in">document</span>.write(<span class="string">"&lt;hr/&gt;"</span>);</span><br><span class="line">         **可以向页面输出变量，固定值和html代码</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span>js的数组</span><br><span class="line">    ![<span class="number">2019</span><span class="number">-12</span><span class="number">-14</span>_105243](F:\笔记\<span class="number">2019</span><span class="number">-12</span><span class="number">-14</span>_105243.png)</span><br><span class="line">    定义的方式（三种）</span><br><span class="line">       第一种：<span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">       第二种：使用内置对象 <span class="built_in">Array</span>对象</span><br><span class="line">              <span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);<span class="comment">//定义一个数组数组的长度是5</span></span><br><span class="line">              arr1[<span class="number">0</span>] = <span class="string">"1"</span>;</span><br><span class="line">       第三种：使用内置对象<span class="built_in">Array</span></span><br><span class="line">              <span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>) ;<span class="comment">//定义一个数组数组里的元素是3,4,5</span></span><br><span class="line">    数组里面有一个属性 length：获取到数组的长度</span><br><span class="line">    数组可以存放不同的数据类型和数据</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7.</span>js的函数</span><br><span class="line">     **在js里面定义函数（方法有三种）</span><br><span class="line">          ***函数的参数列表里面，不需要写<span class="keyword">var</span>,直接写参数名称</span><br><span class="line">          第一种方式：</span><br><span class="line">               (<span class="number">1</span>).使用到一个关键字<span class="function"><span class="keyword">function</span></span></span><br><span class="line"><span class="function">                <span class="title">function</span> 方法名（参数列表）</span>&#123;</span><br><span class="line">                      方法体；</span><br><span class="line">                      返回值可有可无（根据实际需要）；</span><br><span class="line">                &#125;</span><br><span class="line">                </span><br><span class="line">                 <span class="function"><span class="keyword">function</span> <span class="title">add2</span>(<span class="params">a,b,c</span>)</span>&#123;</span><br><span class="line">                     <span class="keyword">var</span> sum = a+b+c;</span><br><span class="line">                     <span class="keyword">return</span> sum;</span><br><span class="line">                 &#125;</span><br><span class="line">                 alert(add2(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>));</span><br><span class="line">         第二种方式：</span><br><span class="line">                *匿名函数</span><br><span class="line">                   <span class="keyword">var</span> add = <span class="function"><span class="keyword">function</span>(<span class="params">参数列表</span>)</span>&#123;</span><br><span class="line">                       方法体和返回值；</span><br><span class="line">                   &#125;</span><br><span class="line">                 <span class="comment">//代码</span></span><br><span class="line">                   <span class="keyword">var</span> add3 = <span class="function"><span class="keyword">function</span>(<span class="params">m,n</span>)</span>&#123;</span><br><span class="line">                       alert(m+n);</span><br><span class="line">                   &#125;</span><br><span class="line">                   add3(<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line">         第三种方式：</span><br><span class="line">               动态函数</span><br><span class="line">               ***使用到js里面的一个内置对象<span class="built_in">Function</span></span><br><span class="line">                       <span class="keyword">var</span> add = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"参数列表"</span>,<span class="string">"方法体和返回值"</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9.</span>js的全局变量和局部变量</span><br><span class="line">         **全局变量：在script标签里面定义一个变量，这个变量在页面中js部分都可以使用</span><br><span class="line">              -在方法外部使用，在方法内部使用，在另一个script标签使用</span><br><span class="line">         **局部变量：在方法内部定义一个变量，只能在方法内部使用</span><br><span class="line">              -如果在方法的外部调用这个变量，提示出错</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10.</span>script标签放在的位置</span><br><span class="line">         *建议吧script标签放到&lt;<span class="regexp">/body&gt; 后面</span></span><br><span class="line"><span class="regexp">         *如果现在有这样一个需求：</span></span><br><span class="line"><span class="regexp">               在js里面需要获取到input里面的值，如果把script标签放到head里面</span></span><br><span class="line"><span class="regexp">               会出现问题。</span></span><br><span class="line"><span class="regexp">               html解析是从上到下解析的，script标签放到的是head里面,直接在里面取input里面的值</span></span><br><span class="line"><span class="regexp">               因为页面还没有解析到input哪一行，肯定取不到</span></span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">11.</span>js的<span class="built_in">String</span>对象</span><br><span class="line">       **创建<span class="built_in">String</span>对象</span><br><span class="line">            <span class="keyword">var</span> str = <span class="string">"abc"</span>;</span><br><span class="line">       **方法和属性</span><br><span class="line">            属性length:字符串的长度</span><br><span class="line">            方法</span><br><span class="line">            (<span class="number">1</span>)与html相关的方法</span><br><span class="line">                 -bold():加粗</span><br><span class="line">                 -fontcolor():设置字符串的颜色</span><br><span class="line">                 -fontsize():设置字体的大小</span><br><span class="line">                 -link():将字符串显示成超链接</span><br><span class="line">            (<span class="number">2</span>)与java相似的方法</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <h4 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h4><pre><code>1.  指令
+    *  作用：用于配置JSP页面，导入资源文件
+    *  格式：
+        &lt;%@ 指令名称  属性名1=属性值1  属性值2=属性值2 ... %&gt;
+    *   分类：
+        1.  page  ：配置JSP页面的
+            *  contentType：等同于response.setContentType()
+                1.  设置响应体的mime类型及字符集
+                2.  设置当前jsp页面编码（只能是高级的IDE才能生效，如果使用低级工具，则需要设置pageEncoding属性设置当前页面的字符集）
+            *  import：导包
+            *  errorPage：当前页面发生异常后，会自动跳转到指定的错误页面
+            *  isErrorPage：标识当前也是是否是错误页面。
+                *  true：是，可以使用内置对象exception
+                *  false：否，默认值。不可以使用内置对象exception
+        2.  include：页面包含的。导入页面的资源文件
+            *  &lt;%@  include  file =&quot;top.jsp&quot;  %&gt;
+        3.  taglib：导入资源
+            *  &lt;%@  taglib  prefix=&quot;c&quot;  uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+                *  prefix：前缀，自定义的
+2.  注释
+    1.  html注释：
+        &lt;!--   --&gt;：只能注释html代码片段
+    2.  jsp注释：
+        &lt;%--    --%&gt;：可以注释所有
+3.  内置对象
+    *  在jsp页面中不需要创建，直接使用对象
+    *  一共有9个
+            变量名                真实类型            作用
+        *    pageContext            PageContext            当前页面共享数据，还可以获得其他八个内置对象
+        *    request                HttpServletRequest    一次请求访问多个资源（转发）
+        *    session                HttpSession            一次会话的多个请求间
+        *    application                ServletContext        所有用户间共享数据
+        *    response                  HttpServletResponse    响应对象
+        *    page                    Object                当前页面（Servlet）的对象this
+        *    out                    JspWriter            输出对象，数据输出到页面上
+        *    config                    ServletConfig            Servlet的配置对象
+        *    exception                Throwable            异常对象</code></pre><h4 id="MVC：开发模式"><a href="#MVC：开发模式" class="headerlink" title="MVC：开发模式"></a>MVC：开发模式</h4><pre><code>1.  MVC：
+    1.  M：Model，模型。JavaBean
+        *  完成具体的业务操作，如：查询数据库，封装对象
+    2.  V：View，视图。JSP
+        *  展示数据
+    3.  C：Controller，控制器。Servlet
+        *  获取用户的输入
+        *  调用模型
+        *  将数据交给视图进行展示
 
 
+    *  优缺点：
+        1.  优点：
+            1.  耦合性低，方便维护，可以利于分工协作
+            2.  重用性高
+        2.  缺点：
+            1.  使得项目架构变得复杂，对开发人员要求高</code></pre><h4 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h4><pre><code>1.  概念：Expression  Language  表达式语言
+2.  作用：替换和简化jsp页面中java代码的编写
+3.  语法：${表达式}
+4.  注意：
+    *  Jsp默认支持el表达式的。如果要忽略el表达式
+        1.  设置jsp中page指令中：isElIgnored=&quot;true&quot;  忽略当前jsp页面中所有的el表达式
+        2.  \${表达式}：忽略当前这个el表达式
+
+5.  使用：
+    1.  运算
+        *  运算符：
+            1.  算数运算符：+  -  *  /（div）%(mod)
+            2.  比较运算符：&gt;  &lt;   &gt;=  &lt;=  ==   !=
+            3.  逻辑运算符：&amp;&amp;(and)   ||  (or)!(not)
+            4.  空运算符：empty
+                *  功能：用于判断字符串、集合、数组对象是否为null并且长度是否为0
+                *  ${empty  list}：判断字符串、集合、数组对象是否为null或者长度为0
+                *  ${not empty  str}：表示判断字符串、集合、数组对象是否不为null并且长度&gt;0
+    2.  获取值
+        1.  el表达式只能从域对象中获取值
+        2.  语法：
+            1.  ${域名称，键名}：从指定域中获取指定键的值
+                *  域名称：
+                    1.  pageScope   --&gt;   pageContext
+                    2.  requestScope   --&gt;  request
+                    3.  sessionScope  --&gt;  session
+                    4.  aplicationScope  --&gt;  application(ServletContext)
+                *  举例：在request域中存储了name=zhangsan
+                *  获取：${requestScope.name}
 
 
+            2.  ${键名}：表示依次从最小的域中查找是否有该键值对的值，直到找到为止。
+            3.  获取对象、List集合、Map集合的值
+                1.  对象：${域名称.键名.属性名}
+                    *  本质上会去调用对象的getter方法
+                2.  List集合：${域名称.键名[索引]}
 
+                3.  Map集合：
+                    *  ${域名称.键名.key名称}
+                    *  ${域名称.键名[&quot;key名称&quot;]}
 
+        3.  隐式对象：
+            *  el表达式中有11个隐式对象
+            *  pageContext：
+                *  获取jsp其他八个内置对象
+                    *  ${pageContext.request.contextPath}：动态获取虚拟目录</code></pre><h4 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h4><pre><code>1.  概念：JavaServer    Pages  Tag  Library    JSP标准标签库
+    *   是由Apache组织提供的开源的免费的jsp标签
+2.  作用：用于简化和替换jsp页面上的java代码
+3.  使用步骤：
+    1.  导入jstl相关jar包
+    2.  引入标签库：taglib指令：&lt;% taglib %&gt;
+    3.  使用标签
 
+4.  常用的JSTL标签
+    1.  if：相当于java代码的if语句
+        1.  属性：
+            *  test必须属性，接受boolean表达式
+                *  如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容
+                *  一般情况下，test属性值会结合el表达式一起使用
+        2.  注意：
+            *  c:if标签没有else情况，想要else情况，则可以在定义一个c:if标签
+    2.  choose：相当于java代码的switch语句
+        1.  使用choose标签声明                      相当于switch声明
+        2.  使用when标签做判断                     相当于case
+        3.  使用otherwise标签做其他情况的声明        相当于default
 
+    3.  foreach：相当于java代码的for语句
+        1.  做重复的操作
+            1.  属性  begin：开始值
+            2.  end：结束值
+            3.  var：临时变量
+            4.  step：增长
 
-
-
-
-
-
+        2.  便利集合对象
+            1.  items:容器对象
+            2.  var：容器中元素的临时变量
+            3.  varStatus：循环状态对象
+                1.  index：容器中元素的索引，从0开始
+                2.  count：循环次数，从1开始</code></pre>
       
 
       
@@ -271,7 +341,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">EL&JSTL</a>
         		</li>
       		
 		</ul>
@@ -327,7 +397,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/13/JavaScript%E5%AD%A6%E4%B9%A0-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,18 +411,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/16/Vue%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/30/JavaScript%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Vue单文件组件的基本用法
+          JavaScript笔记
         
       </div>
     </a>
   
   
-    <a href="/2020/04/13/RGB%E9%A2%9C%E8%89%B2%E6%9F%A5%E8%AF%A2%E5%AF%B9%E7%85%A7%E8%A1%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">RGB颜色表</div>
+    <a href="/2021/04/28/Java%20IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java IO流</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -514,6 +584,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">EL&JSTL</a>
               </li>
             
             <div class="clearfix"></div>

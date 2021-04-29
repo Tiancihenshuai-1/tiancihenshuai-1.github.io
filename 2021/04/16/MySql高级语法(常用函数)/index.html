@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue脚手架 | (&gt;‿◠)✌</title>
+  <title>MySql高级语法(常用函数) | (&gt;‿◠)✌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装3.X版本的Vue脚手架： npm install -g @vue&#x2F;cli  ​      基于脚手架创建vue项目  12345678910&#x2F;&#x2F;1.基于交互式命令的方式，创建新版vue项目         vue create my-project&#x2F;&#x2F;2.基于图形化界面的方式，创建新版vue项目vue ui&#x2F;&#x2F;3.基于2.X的旧版本，创建旧版vue项目npm install -g @vue">
+  <meta name="description" content="#TOP语句select * from user limit 5 #like操作符select * from user where age like 18;                     #like操作符用于在where子句中搜索列中的指定模式 select * from user where userName LIKE ‘面%’;   # %可用于定义通配符(模糊查询) 查询用户名中带">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue脚手架">
-<meta property="og:url" content="http://yoursite.com/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/index.html">
+<meta property="og:title" content="MySql高级语法(常用函数)">
+<meta property="og:url" content="http://yoursite.com/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/index.html">
 <meta property="og:site_name" content="(&gt;‿◠)✌">
-<meta property="og:description" content="安装3.X版本的Vue脚手架： npm install -g @vue&#x2F;cli  ​      基于脚手架创建vue项目  12345678910&#x2F;&#x2F;1.基于交互式命令的方式，创建新版vue项目         vue create my-project&#x2F;&#x2F;2.基于图形化界面的方式，创建新版vue项目vue ui&#x2F;&#x2F;3.基于2.X的旧版本，创建旧版vue项目npm install -g @vue">
+<meta property="og:description" content="#TOP语句select * from user limit 5 #like操作符select * from user where age like 18;                     #like操作符用于在where子句中搜索列中的指定模式 select * from user where userName LIKE ‘面%’;   # %可用于定义通配符(模糊查询) 查询用户名中带">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-16T08:46:08.000Z">
-<meta property="article:modified_time" content="2020-04-16T08:59:10.004Z">
+<meta property="article:published_time" content="2021-04-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-29T14:29:26.930Z">
 <meta property="article:author" content="吃土长大的">
-<meta property="article:tag" content="-vue-cli">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="(&gt;‿◠)✌" type="application/atom+xml">
@@ -157,52 +157,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue脚手架" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySql高级语法(常用函数)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue脚手架
+      MySql高级语法(常用函数)
     </h1>
   
 
         
-        <a href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
+        <a href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/" class="archive-article-date">
+  	<time datetime="2021-04-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>安装3.X版本的Vue脚手架：</p>
-<p>npm install -g @vue/cli</p>
-</blockquote>
-<p>​      <strong>基于脚手架创建vue项目</strong></p>
-<blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.基于交互式命令的方式，创建新版vue项目         </span></span><br><span class="line">vue create my-project</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.基于图形化界面的方式，创建新版vue项目</span></span><br><span class="line">vue ui</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.基于2.X的旧版本，创建旧版vue项目</span></span><br><span class="line">npm install -g <span class="meta">@vue</span>/cli-init</span><br><span class="line">vue init webpack my-project</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
+        <p><strong>#TOP语句</strong><br>select * from <code>user</code> limit 5</p>
+<p><strong>#like操作符</strong><br>select * from <code>user</code> where age like 18;                     <strong>#like操作符用于在where子句中搜索列中的指定模式</strong></p>
+<p>select * from <code>user</code> where userName LIKE ‘面%’;   <strong># %可用于定义通配符(模糊查询) 查询用户名中带有面字的用户</strong><br>select * from <code>user</code> where userName LIKE ‘%障’;   <strong># 查询用户名最后一个字带有障的用户</strong></p>
+<p>select * from <code>user</code> where userName LIKE ‘%N%’; <strong>#查询用户名中包含N字的用户</strong></p>
+<p>select * from <code>user</code> where userName NOT LIKE ‘%面%’; <strong>#查询用户名中不带面字的用户  NOT LIKE</strong></p>
 <a id="more"></a>
 
-<p>​    <strong>通过package.json配置项目</strong></p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//必须是符合规范的json语法</span></span><br><span class="line"><span class="string">"vue"</span>:&#123;</span><br><span class="line">  <span class="string">"devServer"</span>:&#123;</span><br><span class="line">	<span class="string">"port"</span>:<span class="string">"8888"</span>,</span><br><span class="line">	<span class="string">"open"</span>:<span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>注意：不推荐使用这种配置方式，推举将vue脚手架相关配置，单独定义到vue.config.js配置文件中。</p>
-</blockquote>
-<p>​    <strong>通过单独配置文件配置项目</strong></p>
-<blockquote>
-<ul>
-<li>​    在项目根目录创建文件vue.config.js</li>
-<li>​    在该文件中进行相关配置，从而覆盖默认配置</li>
-</ul>
-</blockquote>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        port:<span class="number">8888</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<p><strong>#sql通配符</strong><br>select * from <code>user</code> where userName LIKE ‘_包’; <strong># _代替一个字符  %代替一个或多个字符</strong></p>
+<p>select * from <code>user</code> where emil RLIKE ‘^[tly]’       <strong># [charlist]通配符</strong></p>
+<p><strong>#IN 操作符 允许我们在where字句中规定多个值</strong><br>select * from <code>user</code> where userName IN (‘面包’,’天’,’Name’)</p>
+<p><strong>#BETWEEN操作符 在where字句中使用 作用是选取介于两个值之间的数据</strong><br>select * from <code>user</code> where age between 17 and 18; <strong>#选取17-18之间的用户</strong><br>select * from <code>user</code> where emil between ‘a’ and ‘d’; <strong>#选取用户邮箱在 a-b的用户</strong></p>
+<p>select * from <code>user</code> where emil not between ‘a’ and ‘d’; <strong>#选取用户邮箱不在 a-b的用户</strong></p>
+<p><strong>#Alias (别名)</strong><br>select * from <code>user</code> as u where u.uid = 1 <strong>#用as给表取别名</strong></p>
+<p>select uid as id,userName as n,age,emil from <code>user</code> where userName = ‘Name’</p>
+<p><strong>#Join 用于根据两个或多个表中的列之间的关系,从这些表中查询数据</strong><br>select u.userName,u.age,r.rolename from <code>user</code> as u,role as r where u.uid = r.rid <strong>#联合查询查询用户表和角色表</strong></p>
+<p><strong>#1.1 join关键词从两个表中获取数据</strong><br>select u.userName,u.age,r.rolename from <code>user</code> as u inner join role as r on u.uid = r.rid  <strong>#内连接 inner join</strong></p>
+<p>select u.userName,u.age,r.rolename from <code>user</code> as u left join role as r on u.uid = r.rid     <strong>#左连接 left join</strong></p>
+<p>select u.userName,u.age,r.rolename from <code>user</code> as u right join role as r on u.uid = r.rid  <strong>#右连接 right join</strong></p>
+<p><strong>#full join (mysql为union) 关键字 表示只要其中某个表存在匹配,full join 关键字就会返回行</strong><br>select * from <code>user</code> left JOIN role on <code>user</code>.uid = role.rid<br>union<br>select * from <code>user</code> right JOIN role on <code>user</code>.uid = role.rid  #mysql中没有 full join 所以用 union代替</p>
+<p><strong>#union 操作符用于合并两个或多个select语句的结果集</strong><br><strong>#union all 语法 允许重复的值  union默认是选取不同的值</strong><br>select * from <code>user</code> left JOIN role on <code>user</code>.uid = role.rid<br>union all<br>select * from <code>user</code> right JOIN role on <code>user</code>.uid = role.rid</p>
+<p><strong>#select into 语句可用于创建表的备份复件 mysql不支持</strong><br>select * into user_copy  from <code>user</code>;</p>
+<p><strong>#create database 语句用于创建数据库</strong><br>create database user_copy</p>
+<p><strong>#create table 语句用于创建数据库中的表</strong><br>create table test(<br>    uid int,<br>    userName VARCHAR(255),<br>    birthday date,<br>    sex VARCHAR(255),<br>    address varchar(255),<br>    age int,<br>    emil varchar(255),<br>    password varchar(255)</p>
+<p>)</p>
+<p><strong>##sql 约束</strong><br><strong>#1.1 NOT NULL约束不接受空值</strong><br><strong>#1.2 UNIQUE 唯一标识约束</strong><br><strong>#1.3 PRIMARY KEY 主键约束唯一标识数据库表中的每条记录 必须包含唯一的值,主键列不能包含null值</strong><br><strong>#1.4 FOREIGN KEY 外键约束</strong><br><strong>#1.5 SQL CHECK 约束用于限制列中的值的范围</strong><br><strong>#1.6 DEFAULT 约束用于向列中插入默认值</strong></p>
+<p>create table test(<br>    uid int NOT NULL AUTO_INCREMENT,<br>    userName VARCHAR(255) DEFAULT ‘chen’,<br>    birthday date,<br>    sex VARCHAR(255),<br>    address varchar(255),<br>    age int,<br>    emil varchar(255),<br>    password varchar(255),<br>    UNIQUE(userName),<br>    PRIMARY KEY (uid),<br>    FOREIGN KEY (uid) REFERENCES role(rid), <strong>#创建role表中rid为外键</strong><br>    CHECK(uid&gt;3)<br>)</p>
+<p>insert into test (birthday,sex,address,age,emil,<code>password</code>) values(DATE(NOW()),’Test’,’Test’,19,’Test’,’Test’)</p>
+<p><strong>#1.7 CREATE INDEX 语句 用于在表中创建索引 以便更快速的查询数据</strong><br>CREATE INDEX aaa on <code>user</code> (userName);</p>
+<p><strong>#1.8 CREATE UNIQUE INDEX 语句创建唯一索引意味着两个不能拥有相同的索引值.</strong><br>CREATE UNIQUE INDEX bbb on <code>user</code> (uid);</p>
+<p><strong>#1.9 ALTER TABLE 语句 用于在已有的表中添加修改或删除列</strong><br>ALTER TABLE test add t datatype;</p>
+<p><strong>#2.0 AUTO INCREMENT字段 在插入新纪录时候自动创建主键字段值</strong><br><strong>#2.1 MYSQL 使用 IDENTITY 关键字执行 auto_increment任务</strong></p>
+<p><strong>##sql函数</strong><br><strong>#1.1 date函数</strong><br>NOW()                       <strong>#返回当前的日期和时间</strong><br>CURDATE()               <strong>#返回当前日期</strong><br>CURTIME()               <strong>#返回当前时间</strong><br>DATE()                      <strong>#提取日期或日期时间表达式的日期部分</strong><br>EXTRACT()               <strong>#返回日期/时间按的单独部分</strong><br>DATA_ADD()           <strong>#给日期添加指定的时间间隔</strong><br>DATE_SUB()            <strong>#从日期减去指定的时间间隔</strong><br>DATEDIFF()             <strong>#返回两个日期之间的天数</strong><br>DATE_FORMAT()    <strong>#用不同的格式显示日期/时间</strong></p>
+<p><strong>##常用的日期函数</strong><br>GETDATE()       <strong>#返回当前日期和时间</strong><br>DATEPART()     <strong>#返回日期/时间的单独部分</strong><br>DATEADD()      <strong>#在日期中添加或减去指定的时间间隔</strong><br>DATEDIFF()      <strong>#返回两个日期之间的时间</strong><br>CONVERT()      <strong>#用不同的格式显示日期/时间</strong></p>
+<p><strong>##Data数据类型</strong><br>DATE - 格式 YYYY-MM-DD<br>DATETIME - 格式: YYYY-MM-DD HH:MM:SS<br>TIMESTAMP - 格式: YYYY-MM-DD HH:MM:SS<br>YEAR - 格式 YYYY 或 YY</p>
+<p><strong>#日期处理</strong><br>select * from <code>user</code> where birthday = ‘2020-12-29’</p>
+<p><strong>##SQL NULL值</strong><br>select * from <code>user</code> where userName IS NULL           <strong>#在user表中查找userName列中为空的用户</strong><br>select * from <code>user</code> where userName IS NOT NULL  <strong># 在user表中查找userName列中不为空的用户</strong></p>
+<p><strong>##Sql 函数</strong><br>select avg(age) from <code>user</code>;  <strong># avg()函数返回列的平均值</strong><br>select count(<em>) from <code>user</code>;  *</em>#count函数返回指定列的行数**</p>
+<p>select count(DISTINCT birthday) from <code>user</code>; <strong>#返回指定列中不同值的行数</strong></p>
+<p>select count(userName) from <code>user</code> where userName = ‘面包’ <strong>#获取用户名为面包的用户个数</strong></p>
+<p>select FIRST(userName) from <code>user</code>;   <strong>#FIRST函数获取指定列中的第一个写入的数据</strong><br>select LAST(userName) from <code>user</code>;    <strong>#LAST函数获取指定列中的最后一个写入的数据</strong></p>
+<p>select MAX(uid) from <code>user</code>;   <strong>#MAX()函数获取指定列中最大的数</strong><br>select MIN(uid) from <code>user</code>;    <strong>#MAX()函数获取指定列中最小的数</strong></p>
+<p>select SUM(uid) from <code>user</code>;   <strong>#sum()函数返回只当列数据的总和</strong></p>
+<p>select userName,SUM(age) from <code>user</code> GROUP BY userName <strong>#GROUP BY对数据进行分组 经常和 SUM()函数组合使用</strong></p>
+<p>select userName,SUM(age) from <code>user</code> GROUP BY userName HAVING SUM(age) &lt;20 <strong>#HAVING()函数和合计函数一起使用</strong></p>
+<p>select UCASE(userName) from <code>user</code>; <strong>#UCASE()函数将指定列中的小写字母转换为大写字母</strong><br>select LCASE(userName) from <code>user</code>; <strong>#LCASE()函数将指定列中的大写字母转换为小写字母</strong></p>
+<p>select MID(userName,1,1) from user; <strong>#MID函数获取指定列中的前几位字符 MID(str,pos,len) 一共三个参数 1.列名 2.字符的开始位置 3.字符的截取长度</strong></p>
+<p>select LEN(userName) from <code>user</code>; <strong>#LEN函数获取指定列中每个字符的长度</strong></p>
+<p>select NOW() from <code>user</code>; <strong>#NOW()函数获取当前日期</strong></p>
+<p>select FORMAT(NOW(),’YYYY/MM/DD’) from <code>user</code>;</p>
 
       
 
@@ -237,7 +260,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-vue-cli</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -293,7 +316,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +330,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/16/2020-04-16-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/28/Java%20IO%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo
+          Java IO流
         
       </div>
     </a>
   
   
-    <a href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue前端交互</div>
+    <a href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySql语法</div>
       <i class="icon-circle-right"></i>
     </a>
   

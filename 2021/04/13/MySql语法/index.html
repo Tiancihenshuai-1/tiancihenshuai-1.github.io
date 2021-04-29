@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue脚手架 | (&gt;‿◠)✌</title>
+  <title>MySql语法 | (&gt;‿◠)✌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装3.X版本的Vue脚手架： npm install -g @vue&#x2F;cli  ​      基于脚手架创建vue项目  12345678910&#x2F;&#x2F;1.基于交互式命令的方式，创建新版vue项目         vue create my-project&#x2F;&#x2F;2.基于图形化界面的方式，创建新版vue项目vue ui&#x2F;&#x2F;3.基于2.X的旧版本，创建旧版vue项目npm install -g @vue">
+  <meta name="description" content="##查询语句select * from user; #1.1 查询列select uid,userName,age from user; #1.2 根据条件查询SELECT userName,age FROM user where username &#x3D; ‘面包’ and age &#x3D; 18 #1.3 select distinct 返回唯一不同的值select distinct userName f">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue脚手架">
-<meta property="og:url" content="http://yoursite.com/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/index.html">
+<meta property="og:title" content="MySql语法">
+<meta property="og:url" content="http://yoursite.com/2021/04/13/MySql%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="(&gt;‿◠)✌">
-<meta property="og:description" content="安装3.X版本的Vue脚手架： npm install -g @vue&#x2F;cli  ​      基于脚手架创建vue项目  12345678910&#x2F;&#x2F;1.基于交互式命令的方式，创建新版vue项目         vue create my-project&#x2F;&#x2F;2.基于图形化界面的方式，创建新版vue项目vue ui&#x2F;&#x2F;3.基于2.X的旧版本，创建旧版vue项目npm install -g @vue">
+<meta property="og:description" content="##查询语句select * from user; #1.1 查询列select uid,userName,age from user; #1.2 根据条件查询SELECT userName,age FROM user where username &#x3D; ‘面包’ and age &#x3D; 18 #1.3 select distinct 返回唯一不同的值select distinct userName f">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-16T08:46:08.000Z">
-<meta property="article:modified_time" content="2020-04-16T08:59:10.004Z">
+<meta property="article:published_time" content="2021-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-29T14:31:09.060Z">
 <meta property="article:author" content="吃土长大的">
-<meta property="article:tag" content="-vue-cli">
+<meta property="article:tag" content="mysql">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="(&gt;‿◠)✌" type="application/atom+xml">
@@ -157,52 +157,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue脚手架" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySql语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue脚手架
+      MySql语法
     </h1>
   
 
         
-        <a href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
+        <a href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2021-04-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>安装3.X版本的Vue脚手架：</p>
-<p>npm install -g @vue/cli</p>
-</blockquote>
-<p>​      <strong>基于脚手架创建vue项目</strong></p>
-<blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.基于交互式命令的方式，创建新版vue项目         </span></span><br><span class="line">vue create my-project</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.基于图形化界面的方式，创建新版vue项目</span></span><br><span class="line">vue ui</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.基于2.X的旧版本，创建旧版vue项目</span></span><br><span class="line">npm install -g <span class="meta">@vue</span>/cli-init</span><br><span class="line">vue init webpack my-project</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
+        <h3 id="查询语句"><a href="#查询语句" class="headerlink" title="##查询语句"></a>##查询语句</h3><p>select * from user;</p>
+<p><strong>#1.1 查询列</strong><br>select uid,userName,age from user;</p>
+<p><strong>#1.2 根据条件查询</strong><br>SELECT userName,age FROM <code>user</code> where username = ‘面包’ and age = 18</p>
+<p><strong>#1.3 select distinct 返回唯一不同的值</strong><br>select distinct userName from user;</p>
+<p><strong>#1.4 where语句使用运算符</strong><br>select * from user where age = 18;    <strong>#条件age等于18</strong><br>select * from user where age &lt;&gt; 18;  <strong>#条件age不等于18</strong><br>select * from user where age &gt; 18;    <strong>#条件age大于18</strong><br>select * from user where age &lt; 18;    <strong>#条件age小于18</strong><br>select * from user where age &gt;= 18;  <strong>#条件age大于等于18</strong><br>select * from user where age &lt;= 18;  <strong>#条件age小于等于18</strong><br>select * from user where age BETWEEN 19 and 20;  <strong>#条件age在19和20之间的</strong><br>select * from user where userName like ‘面%’;          <strong>#搜索列中的指定模式  %可用于定义通配符</strong></p>
 <a id="more"></a>
 
-<p>​    <strong>通过package.json配置项目</strong></p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//必须是符合规范的json语法</span></span><br><span class="line"><span class="string">"vue"</span>:&#123;</span><br><span class="line">  <span class="string">"devServer"</span>:&#123;</span><br><span class="line">	<span class="string">"port"</span>:<span class="string">"8888"</span>,</span><br><span class="line">	<span class="string">"open"</span>:<span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>注意：不推荐使用这种配置方式，推举将vue脚手架相关配置，单独定义到vue.config.js配置文件中。</p>
-</blockquote>
-<p>​    <strong>通过单独配置文件配置项目</strong></p>
-<blockquote>
-<ul>
-<li>​    在项目根目录创建文件vue.config.js</li>
-<li>​    在该文件中进行相关配置，从而覆盖默认配置</li>
-</ul>
-</blockquote>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">    devServer:&#123;</span><br><span class="line">        port:<span class="number">8888</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<p><strong>#1.5 and &amp; or</strong><br>select * from user where userName = ‘面包’ and age = 18    <strong># and  运算符需要同时满足两个条件</strong><br>select * from user where userName = ‘面包’ or age = 20       <strong># or 运算符只需要满足其中一个条件即可</strong></p>
+<p>select * from user where (userName=’面包’ or userName=’路障’) and age = 19  <strong># or和and组合使用 条件解释为 : 是否有满足 姓名为面包或者路障 并且年龄为19 的用户</strong></p>
+<p><strong>#1.6 ORDER BY 语句用于根据指定的列对结果进行排序</strong><br>select * from user ORDER BY uid            <strong>#根据uid数字顺序从大小排序</strong><br>select * from user ORDER BY uid DESC <strong>#根据uid数字顺序从小到大排序 DESC为降序</strong></p>
+<h3 id="添加语句"><a href="#添加语句" class="headerlink" title="##添加语句"></a>##添加语句</h3><p><strong>#1.1 第一种方式</strong><br>insert into user values(10,’迟’,date(‘2021-04-24’),’男’,’河南’,19,‘c@outlook.com’,’123456’);    <strong>#插入语句 日期格式为data(now())当前日期 或者 date(‘日期格式’)</strong></p>
+<p><strong>#1.1 第二种方式</strong><br>insert into user (userName,birthday,sex,address,age,emil,<code>password</code>) values(‘Test’,date(‘2021-04-24’),’男’,’河南’,19,‘c@outlook.com’,’123456’); <strong># 选择指定的列来插入</strong></p>
+<h3 id="修改语句"><a href="#修改语句" class="headerlink" title="##修改语句"></a>##修改语句</h3><p><strong>#1.1</strong><br>update user set userName = ‘雨’ where uid = 11      <strong>#修改id为11的用到的用户名为雨</strong></p>
+<p><strong>#1.2</strong><br>update user set age = 20,emil=’y@outlook.com’,sex=’女’ where uid= 11  <strong>#一次修一行中的多个列</strong></p>
+<h3 id="删除语句"><a href="#删除语句" class="headerlink" title="##删除语句"></a>##删除语句</h3><p><strong>#1.1</strong><br>delete from user where uid = 11;   <strong>#删除user表id为1的用户</strong></p>
+<p>delete form user;<br>delete * from user;   <strong># 以上两种删除所有行</strong></p>
 
       
 
@@ -237,7 +227,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-vue-cli</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -293,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/04/13/MySql%E8%AF%AD%E6%B3%95/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +297,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/16/2020-04-16-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo
+          MySql高级语法(常用函数)
         
       </div>
     </a>
   
   
-    <a href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue前端交互</div>
+    <a href="/2020/06/28/JavaEE%E5%9F%BA%E7%A1%80%E7%AF%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaEE基础篇</div>
       <i class="icon-circle-right"></i>
     </a>
   

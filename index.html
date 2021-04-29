@@ -154,6 +154,608 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaScript笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/30/JavaScript%E7%AC%94%E8%AE%B0/">JavaScript笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/30/JavaScript%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-04-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="ECMAScript：客户端脚本语言的标准"><a href="#ECMAScript：客户端脚本语言的标准" class="headerlink" title="* ECMAScript：客户端脚本语言的标准"></a>* ECMAScript：客户端脚本语言的标准</h4><h5 id="1-基本语法："><a href="#1-基本语法：" class="headerlink" title="1. 基本语法："></a>1. 基本语法：</h5><pre><code>1. 与html结合方式
+    1. 内部JS：
+        * 定义&lt;script&gt;，标签体内就是js代码
+    2. 外部JS：
+        * 定义&lt;script&gt;，通过src属性引入外部的js文件
+
+
+    *   注意：
+        1. &lt;script&gt;可以定义在HTML页面的任何地方。但是定义的位置会影响执行的顺序。
+        2. &lt;script&gt;可以定义多个。 
+
+2.  注释
+    1. 单行注释：//注释内容
+    2. 多行注释：/*注释内容*/
+3.  数据类型
+    1.  原始数据类型(基本数据类型)：
+        1. number：数字。整数/小数/NaN（not  a  number  一个不是数字的数字类型）
+        2. string：字符型。字符串  &quot;abc&quot;
+        3. boolean：true和false
+        4. null：一个对象为空的占位符
+        5. undefined：未定义。如果一个变量没有给初始化值，则会被默认赋值为undefined
+    2.  引用数据类型：(对象数据类型)
+        1.  Object
+        2.  Array
+        3.  Function
+        4.  Data
+4.  变量
+    *  变量：一小块存储数据的内存空间
+    *  Java语言是强类型语言，而JavaScript是弱类型语言。
+        *  强类型：在开辟变量存储空间时，定义了空间将来存储的数据的数据类型。只能存储固定的类型数据
+        *  弱类型：在开辟变量存储空间时，不定义空间将来的存储数据类型，可以存放任意类型的数据。
+    *  语法：
+        *  var   变量名  =   初始化值；
+    *  typeof运算符：获取变量的类型。
+        *  注：null运算后得到的是object
+5.  运算符
+    1.  一元运算符：只有一个运算符的运算符
+        ++，--，+（正号）
+    2.  算数运算符
+        +  -  *  /  %   ...
+    3.  赋值运算符
+        =  +=  -+ ...
+    4.  比较运算符
+        &gt;  &lt;   &gt;=  &lt;=  ==  ===(全等于)
+    5.   逻辑运算符
+        &amp;&amp;   ||  ！
+        *  其他类型转boolean：
+            1.  number： 0或nNaN为假，其他为真
+            2.  string：除了空字符串（&quot;&quot;），其他都是true
+            3.  null&amp;undefined：都是false
+            4.  对象：所有对象都为true
+    6.   三元运算符
+        ？  ： 表达式
+        var a = 3;
+        var b = 4;
+        var c = a&gt;b  ? 1:0;
+        *  语法：
+            *  表达式？值1：值2；
+            *  判断表达式的值，如果是true则取值1，如果是false则取值2；
+
+6.  流程控制语句：
+    1.   if...else
+    2.   switch
+        *  在Java中，switch语句可以接受的数据类型：byte  int  shor  ,枚举（1.5），String（1.7）
+            *  switch(变量)：
+                case  值：
+        *  在JS中，switch语句可以接受任意的原始数据类型
+    3.   while
+    4.   do...while
+    5.   for                                                                   </code></pre><h5 id="2-基本对象："><a href="#2-基本对象：" class="headerlink" title="2. 基本对象："></a>2. 基本对象：</h5><pre><code>1.  Function：函数（方法）对象
+    1.   创建：
+        1.     var   fun  = new Function(形式参数列表，方法体)；
+        2.    function  方法名称（形式参数列表）{方法体}      
+        3.    var   方法名  =  function（形式参数列表）{方法体}
+    2.  方法：
+    3.  属性：
+        length：代表形参的个数
+    4.  特点：
+        1.    方法定义是，形参的类型不用写，返回值类型也不写。
+        2.    方法是一个对象，如果定义名称相同的方法，会覆盖
+        3.    在JS中，方法的调用只与方法的名称有关，和参数列表无关
+        4.    在方法声明中有一个隐藏的内置对象（数组），arguments，封装所有的实际参数
+    5.   调用
+        方法名称（实际参数列表）；
+
+
+2.  Array：数组对象
+    1.  创建：
+        1. var  arr  =  new  Array(元素列表)；
+        2. var  arr  = new  Array(默认长度)；
+        3. var  arr  = [元素列表]；
+    2.  方法
+        1. join(参数)：将数组中的元素按照指定的分隔符拼接为字符串
+        2. push()：向数组的末尾添加一个或更多元素，并返回新的长度。
+    3.  属性
+        length：数组的长度
+    4.  特点：
+        1.    JS中，数组元素的类型可变的。
+        2.    JS中，数组长度可变的。
+3.  Boolean
+4.  Date：日期对象
+    1.  创建：
+        var  date  = new Date();
+    2.  方法：
+        toLocaleString()：返回当前date对象对应的时间本地字符串格式
+        getTime()：获取毫秒值。返回当前如期对象描述的时间到1970年1月1日零点的毫秒值差
+5.  Math：数学对象
+    1.   创建:
+        *   特点：Math对象不能创建，直接使用。Math.方法名();
+    2.  方法：
+        random()：返回0~1之间的随机数。含0不含1
+        ceil(x)：对象进行上舍入。
+        floor(x)：对象进行下舍入。
+        round(x)：把数四舍五入为最接近的整数。
+    3.  属性：
+        PI 
+6.  Number
+7.   String
+8.  RegExp：正则表达式对象
+    1.  正则表达式：定义字符串的组成规则。
+        1.  单个字符:[]
+            如：[a]  [ab]  [a-zA-Z0-9]
+            *   特殊符号代表特殊含义的单个字符：
+                \d:单个数字字符[0-9]
+                \w:单个单词字符[a-zA-Z0-9]
+        2.  量词符号：
+            ？：表示出现0次或1次
+            *：表示出现0次或多次
+            +：出现1次或多次
+            {m,n}：表示  m&lt;=  数量   &lt;= n
+                *  m如果缺省：{,n}:最多n次
+                *   n 如果缺省：{m,}最少m次
+        3.  开始结束符号
+            *  ^:开始
+            *  $:结束
+    2.  正则对象：
+        1.    创建
+            1.    var  reg  = new  RegExp(&quot;正则表达式&quot;);
+            2.    var  reg = /正则表达式/；
+        3.    方法
+            1.    test（参数）：验证指定的字符串是否符合正则定义的规范
+9.  Global
+    1.   特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。方法名（）；
+    2.   方法：
+        encodeURI(): url编码
+        decodeURI():url解码
+        encodeURIComponent():url编码，编码的字符更多
+        decodeURIComponent():url解码
+
+        parseInt():将字符串转为数字
+            *  逐一判断每一个字符是否是数字，直到不是数字为止，将前面数字部分转为number  
+        isNaN():判断一个值是否是NaN
+            *  NaN参与的==比较全部问false
+        eval():讲JavaScript  字符串，并把它作为脚本代码执行。</code></pre><p>​                          </p>
+<h4 id="BOM："><a href="#BOM：" class="headerlink" title="*  BOM："></a>*  BOM：</h4><pre><code>1.   概念：Browser   Object  Model  浏览器对象模型
+*  将浏览器的各个组成部分封装成对象 m 。
+
+2.   组成：
+    * Window：窗口对象
+    * Navigator：浏览器对象
+    * Screen：显示器屏幕对象
+    * History：历史记录对象
+    * Location：地址栏对象
+
+3.   Window：窗口对象
+      1.  创建
+        2.  方法
+                alert（）显示带有一段消息和一个确认按钮的警告框。
+                confirm()  显示带有一段消息以及确认按钮和取消按钮的对话框
+                        *  如果用户点击确认按钮，则方法返回true
+                        *  如果用户点击取消按钮，则方法返回false
+                prompt（）   显示可提示用户输入的对话框。
+                        *  返回值，获取用户输入的值
+            2.  与打开关闭有关的方法：
+                close()  关闭浏览器窗口。
+                        *  谁调用就关闭谁
+                open()  打开一个新的浏览器窗口
+                        * 返回新的Window对象
+            3.  与定时器有关的方式
+                setTimeout()     在指定的毫秒数后调用函数或计算机表达式。
+                        *  参数：
+                            1.  js代码或者方法对象
+                            2.  毫秒值
+                        *  返回值：唯一标识，用于取消定时器
+                clearTimeout()  取消由 setTimeout()  方法设置的  timeout.
+
+                setInterval()   按照指定的周期（以毫秒计）来调用函数或计算机表达式。
+                clearInterval()  取消由  setInterval()设置的timeout。
+        3.   属性
+            1.   获取其他BOM对象：
+                history
+                location
+                Navigator
+                Screen:
+            2.  获取DOM对象
+                document
+        4.   特点
+            *  Window对象不需要创建可以直接使用  window使用。window.方法名();
+            *  Window引用可以省略。  方法名();
+
+
+4.  Location：地址栏对象
+    1.  创建（获取）
+            1.  window.location
+            2.  location
+        2.  方法：
+            *  reload()  重新加载当前文档。刷新
+        3.  属性
+            *  href  设置或返回完整的  URL。
+5.  History：历史记录对象
+    1.  创建（获取）：
+        1.  window.history
+        2.  history
+    2.  方法：
+        * back()  加载history列表中的前一个URL。
+        * forward()加载history列表中的下一个URL。
+        * go(参数) 加载history列表中的某一个具体页面
+            * 参数：
+                * 正数：前进几个历史记录
+                * 负数：后退几个历史记录
+    3.  属性：
+        *  length   返回当前窗口历史列表中的URL数量。</code></pre><h4 id="DOM"><a href="#DOM" class="headerlink" title="*  DOM"></a>*  DOM</h4><pre><code>    * 功能:控制HTML文档的内容
+     * 获取页面标签(元素)对象：Element
+         *  document.getElementById(“id值”)：通过元素的id获取元素对象
+
+    *  操作Element对象：
+        1.  修改属性值：
+            1.  明确获取的对象是那一个？
+            2.  查看API文档，找其中有那些属性可以设置
+        2.   修改标签体内容：
+            * 属性：innerHTML
+            1.  获取元素对象
+            2.  使用innerHtml属性修改标签体内容
+
+    1.  事件
+        *  功能：  某些组件被执行了某些操作后，触发某些代码的执行
+        *  如何绑定事件
+            1.  直接在HTML标签上，指定事件的属性，属性值就是js代码
+                1.  事件：onclick ---- 单击事件
+
+
+* 概念：Document  Object  Model  文档对象模型
+    * 将标记语言文档的各个组成部分，封装为对象。可以使用这些对象，对标记语言文档进行CRUD的动态操作。
+* W3C  DOM 标准被分为3个不同的部分：
+        * 核心  DOM -- 针对任何结构化文档的标准模型
+            * Document：文档对象
+            * ELement：元素对象
+            * Attribute：属性对象
+            * Text：文本对象
+            * Comment：注释对象
+
+            * Node：节点对象，其他5个的父对象
+        * XML DOM  -- 针对XML文档的标准模型
+        * HTML DOM --  针对HTML文档的标准模型
+*  核心DOM模型：
+        *  Document：文档对象
+            1. 创建（获取）：在HTML  DOM 模型中可以使用window对象来获取
+                1.  window.document
+                2.  document
+            2. 方法：
+                1.  获取ELement对象：
+                    1.    getElementById()；  根据id属性值获取元素对象。id属性值一般唯一。
+                    2.    getElementsByTagName();   根据元素名称获取元素对象们。返回值是一个数组
+                    3.    getElementsByClassName();   根据Class属性值获取元素对象们。返回值是一个数组
+                    4.    getElementsByName()；根据name属性值获取元素对象。返回值是一个数组
+                2.  创建其他DOM对象：
+                    CreateAttribute(name)
+                    createComment()
+                    createElement()
+                    createTextNode()
+            3.  属性
+        *  ELement：元素对象
+            1.  获取/创建：通过document来获取和创建
+            2.  方法：
+                1.  removeAttribute()：删除属性
+                2.  setAttribute()：设置属性
+        *  Node：节点对象，其他5个的父对象
+            *  特点：所有dom对象都可以被认为是一个节点
+            *  方法：
+                *  CRUD  dom树：
+                    *  appendChild()    向节点的子节点列表的结尾添加新的子节点。
+                    *  removeChild()    删除（并返回）当前节点的指定子节点。
+                    *  replaceChild()    用新节点替换一个子节点。
+            *  属性
+                *  parentNode  返回当前节点的父节点
+*  HTML  DOM
+    1. 标签体的设置和获取：innerHTMl
+    2. 使用HTML元素对象的属性
+    3. 控制元素样式
+        1.   使用元素的Style属性来设置
+        2.   提前定义好类选择器的样式，通过元素的className属性来设置class属性值。</code></pre><h4 id="事件监听机制："><a href="#事件监听机制：" class="headerlink" title="事件监听机制："></a>事件监听机制：</h4><pre><code>*  概念：某些组件被执行了某些操作后触发某些代码的执行。
+    *  事件：某些操作。如：单机，双击，键盘按下，鼠标移动
+    *  事件源：组件。
+    *  监听器：代码
+    *  注册监听：将事件，事件源，监听器结合在一起。当事件源上发生了某个事件，则触发执行某个监听器代码。
+
+
+*   常见的事件：
+    1.  点击事件：
+        1.  onclick：单击事件
+        2.  ondblclick：双击事件
+
+    2.  焦点事件
+        1.  onblur：失去焦点
+        2.  onfocus：元素获得焦点。
+
+    3.  加载事件：
+        1.  onload：一张页面或一副图像完成加载。
+
+    4.  鼠标事件：
+        1.  onmousedown   鼠标按钮被按下。
+        2.  onmouseup  鼠标按键被松开。
+        3.  onmousemove  鼠标被移动。     
+
+    5.  键盘事件：
+        1.  onkeydown   某个键盘按键按下。
+        2.  onkeyup  某个键盘按键被松开。
+        3.  onkeypress   某个键盘按键被按下并松开。
+
+    6.  选择和改变
+        1.  onchange  域的内容被改变。
+        2.  onselect  文本被选中。
+    7.  表单事件：
+        1.  onsubmit  确认按钮被点击。
+            *  可以阻止表单的提交
+                *  方法返回false则表单被阻止提交。
+        2.  onreset  重置按钮被点击。</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/30/JavaScript%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-EL&amp;JSTL笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/">EL&amp;JSTL笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2021-04-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h4><pre><code>1.  指令
+    *  作用：用于配置JSP页面，导入资源文件
+    *  格式：
+        &lt;%@ 指令名称  属性名1=属性值1  属性值2=属性值2 ... %&gt;
+    *   分类：
+        1.  page  ：配置JSP页面的
+            *  contentType：等同于response.setContentType()
+                1.  设置响应体的mime类型及字符集
+                2.  设置当前jsp页面编码（只能是高级的IDE才能生效，如果使用低级工具，则需要设置pageEncoding属性设置当前页面的字符集）
+            *  import：导包
+            *  errorPage：当前页面发生异常后，会自动跳转到指定的错误页面
+            *  isErrorPage：标识当前也是是否是错误页面。
+                *  true：是，可以使用内置对象exception
+                *  false：否，默认值。不可以使用内置对象exception
+        2.  include：页面包含的。导入页面的资源文件
+            *  &lt;%@  include  file =&quot;top.jsp&quot;  %&gt;
+        3.  taglib：导入资源
+            *  &lt;%@  taglib  prefix=&quot;c&quot;  uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+                *  prefix：前缀，自定义的
+2.  注释
+    1.  html注释：
+        &lt;!--   --&gt;：只能注释html代码片段
+    2.  jsp注释：
+        &lt;%--    --%&gt;：可以注释所有
+3.  内置对象
+    *  在jsp页面中不需要创建，直接使用对象
+    *  一共有9个
+            变量名                真实类型            作用
+        *    pageContext            PageContext            当前页面共享数据，还可以获得其他八个内置对象
+        *    request                HttpServletRequest    一次请求访问多个资源（转发）
+        *    session                HttpSession            一次会话的多个请求间
+        *    application                ServletContext        所有用户间共享数据
+        *    response                  HttpServletResponse    响应对象
+        *    page                    Object                当前页面（Servlet）的对象this
+        *    out                    JspWriter            输出对象，数据输出到页面上
+        *    config                    ServletConfig            Servlet的配置对象
+        *    exception                Throwable            异常对象</code></pre><h4 id="MVC：开发模式"><a href="#MVC：开发模式" class="headerlink" title="MVC：开发模式"></a>MVC：开发模式</h4><pre><code>1.  MVC：
+    1.  M：Model，模型。JavaBean
+        *  完成具体的业务操作，如：查询数据库，封装对象
+    2.  V：View，视图。JSP
+        *  展示数据
+    3.  C：Controller，控制器。Servlet
+        *  获取用户的输入
+        *  调用模型
+        *  将数据交给视图进行展示
+
+
+    *  优缺点：
+        1.  优点：
+            1.  耦合性低，方便维护，可以利于分工协作
+            2.  重用性高
+        2.  缺点：
+            1.  使得项目架构变得复杂，对开发人员要求高</code></pre><h4 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h4><pre><code>1.  概念：Expression  Language  表达式语言
+2.  作用：替换和简化jsp页面中java代码的编写
+3.  语法：${表达式}
+4.  注意：
+    *  Jsp默认支持el表达式的。如果要忽略el表达式
+        1.  设置jsp中page指令中：isElIgnored=&quot;true&quot;  忽略当前jsp页面中所有的el表达式
+        2.  \${表达式}：忽略当前这个el表达式
+
+5.  使用：
+    1.  运算
+        *  运算符：
+            1.  算数运算符：+  -  *  /（div）%(mod)
+            2.  比较运算符：&gt;  &lt;   &gt;=  &lt;=  ==   !=
+            3.  逻辑运算符：&amp;&amp;(and)   ||  (or)!(not)
+            4.  空运算符：empty
+                *  功能：用于判断字符串、集合、数组对象是否为null并且长度是否为0
+                *  ${empty  list}：判断字符串、集合、数组对象是否为null或者长度为0
+                *  ${not empty  str}：表示判断字符串、集合、数组对象是否不为null并且长度&gt;0
+    2.  获取值
+        1.  el表达式只能从域对象中获取值
+        2.  语法：
+            1.  ${域名称，键名}：从指定域中获取指定键的值
+                *  域名称：
+                    1.  pageScope   --&gt;   pageContext
+                    2.  requestScope   --&gt;  request
+                    3.  sessionScope  --&gt;  session
+                    4.  aplicationScope  --&gt;  application(ServletContext)
+                *  举例：在request域中存储了name=zhangsan
+                *  获取：${requestScope.name}
+
+
+            2.  ${键名}：表示依次从最小的域中查找是否有该键值对的值，直到找到为止。
+            3.  获取对象、List集合、Map集合的值
+                1.  对象：${域名称.键名.属性名}
+                    *  本质上会去调用对象的getter方法
+                2.  List集合：${域名称.键名[索引]}
+
+                3.  Map集合：
+                    *  ${域名称.键名.key名称}
+                    *  ${域名称.键名[&quot;key名称&quot;]}
+
+        3.  隐式对象：
+            *  el表达式中有11个隐式对象
+            *  pageContext：
+                *  获取jsp其他八个内置对象
+                    *  ${pageContext.request.contextPath}：动态获取虚拟目录</code></pre><h4 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h4><pre><code>1.  概念：JavaServer    Pages  Tag  Library    JSP标准标签库
+    *   是由Apache组织提供的开源的免费的jsp标签
+2.  作用：用于简化和替换jsp页面上的java代码
+3.  使用步骤：
+    1.  导入jstl相关jar包
+    2.  引入标签库：taglib指令：&lt;% taglib %&gt;
+    3.  使用标签
+
+4.  常用的JSTL标签
+    1.  if：相当于java代码的if语句
+        1.  属性：
+            *  test必须属性，接受boolean表达式
+                *  如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容
+                *  一般情况下，test属性值会结合el表达式一起使用
+        2.  注意：
+            *  c:if标签没有else情况，想要else情况，则可以在定义一个c:if标签
+    2.  choose：相当于java代码的switch语句
+        1.  使用choose标签声明                      相当于switch声明
+        2.  使用when标签做判断                     相当于case
+        3.  使用otherwise标签做其他情况的声明        相当于default
+
+    3.  foreach：相当于java代码的for语句
+        1.  做重复的操作
+            1.  属性  begin：开始值
+            2.  end：结束值
+            3.  var：临时变量
+            4.  step：增长
+
+        2.  便利集合对象
+            1.  items:容器对象
+            2.  var：容器中元素的临时变量
+            3.  varStatus：循环状态对象
+                1.  index：容器中元素的索引，从0开始
+                2.  count：循环次数，从1开始</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">EL&JSTL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/29/EL&JSTL%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java IO流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -201,6 +803,166 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/28/Java%20IO%E6%B5%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MySql高级语法(常用函数)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/">MySql高级语法(常用函数)</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/" class="archive-article-date">
+  	<time datetime="2021-04-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>#TOP语句</strong><br>select * from <code>user</code> limit 5</p>
+<p><strong>#like操作符</strong><br>select * from <code>user</code> where age like 18;                     <strong>#like操作符用于在where子句中搜索列中的指定模式</strong></p>
+<p>select * from <code>user</code> where userName LIKE ‘面%’;   <strong># %可用于定义通配符(模糊查询) 查询用户名中带有面字的用户</strong><br>select * from <code>user</code> where userName LIKE ‘%障’;   <strong># 查询用户名最后一个字带有障的用户</strong></p>
+<p>select * from <code>user</code> where userName LIKE ‘%N%’; <strong>#查询用户名中包含N字的用户</strong></p>
+<p>select * from <code>user</code> where userName NOT LIKE ‘%面%’; <strong>#查询用户名中不带面字的用户  NOT LIKE</strong></p>
+        
+          <a class="article-more-a" href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/16/MySql%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95(%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MySql语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/">MySql语法</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2021-04-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="查询语句"><a href="#查询语句" class="headerlink" title="##查询语句"></a>##查询语句</h3><p>select * from user;</p>
+<p><strong>#1.1 查询列</strong><br>select uid,userName,age from user;</p>
+<p><strong>#1.2 根据条件查询</strong><br>SELECT userName,age FROM <code>user</code> where username = ‘面包’ and age = 18</p>
+<p><strong>#1.3 select distinct 返回唯一不同的值</strong><br>select distinct userName from user;</p>
+<p><strong>#1.4 where语句使用运算符</strong><br>select * from user where age = 18;    <strong>#条件age等于18</strong><br>select * from user where age &lt;&gt; 18;  <strong>#条件age不等于18</strong><br>select * from user where age &gt; 18;    <strong>#条件age大于18</strong><br>select * from user where age &lt; 18;    <strong>#条件age小于18</strong><br>select * from user where age &gt;= 18;  <strong>#条件age大于等于18</strong><br>select * from user where age &lt;= 18;  <strong>#条件age小于等于18</strong><br>select * from user where age BETWEEN 19 and 20;  <strong>#条件age在19和20之间的</strong><br>select * from user where userName like ‘面%’;          <strong>#搜索列中的指定模式  %可用于定义通配符</strong></p>
+        
+          <a class="article-more-a" href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/13/MySql%E8%AF%AD%E6%B3%95/">展开全文 >></a>
         </p>
       
 
@@ -387,6 +1149,94 @@
 
 
   
+    <article id="post-Webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/16/Webpack/">WebPack使用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/16/Webpack/" class="archive-article-date">
+  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一、在项目中安装和配置webpack"><a href="#一、在项目中安装和配置webpack" class="headerlink" title="一、在项目中安装和配置webpack"></a>一、在项目中安装和配置webpack</h4><p>​        1.运行 npm install  webpack webpack-cli -D命令，安装webpack相关包</p>
+<p>​        2.在项目根目录中，创建名为 webpack.config.js的webpack配置文件</p>
+<p>​        3.在webpack的配置文件中，初始化如下基本配置：</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">       <span class="comment">//编译模式</span></span><br><span class="line">       mode: <span class="string">'development'</span><span class="comment">//development   production。mode用来指定构建模式</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>​        4.在package.json 配置文件中的 scripts节点下，新增dev脚本如下：</p>
+<blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>:&#123;</span><br><span class="line">    <span class="string">"dev"</span>:<span class="string">"webpack"</span>  <span class="comment">//script节点下的脚本，可以通过npm run执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+<p>​        5.在终端中运行 npm run dev 命令，启动 webpack进行项目打包。</p>
+        
+          <a class="article-more-a" href="/2020/04/16/Webpack/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/16/Webpack/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2020-04-16-码云基本功能" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -509,410 +1359,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/04/16/2020-04-16-hexo/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue脚手架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/">Vue脚手架</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>安装3.X版本的Vue脚手架：</p>
-<p>npm install -g @vue/cli</p>
-</blockquote>
-<p>​      <strong>基于脚手架创建vue项目</strong></p>
-<blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.基于交互式命令的方式，创建新版vue项目         </span></span><br><span class="line">vue create my-project</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.基于图形化界面的方式，创建新版vue项目</span></span><br><span class="line">vue ui</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.基于2.X的旧版本，创建旧版vue项目</span></span><br><span class="line">npm install -g <span class="meta">@vue</span>/cli-init</span><br><span class="line">vue init webpack my-project</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</blockquote>
-        
-          <a class="article-more-a" href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-vue-cli</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Vue%E8%84%9A%E6%89%8B%E6%9E%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue前端交互" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/">Vue前端交互</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、axios"><a href="#一、axios" class="headerlink" title="一、axios"></a>一、axios</h4><p>​        1.实例</p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'/adata'</span>).then(<span class="function"><span class="params">ret</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//data属性名称是固定的，用于获取后台响应的数据</span></span><br><span class="line">    <span class="built_in">console</span>.log(ret.data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-</blockquote>
-        
-          <a class="article-more-a" href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Vue%E5%89%8D%E7%AB%AF%E4%BA%A4%E4%BA%92/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Webpack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Webpack/">WebPack使用</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/16/Webpack/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="一、在项目中安装和配置webpack"><a href="#一、在项目中安装和配置webpack" class="headerlink" title="一、在项目中安装和配置webpack"></a>一、在项目中安装和配置webpack</h4><p>​        1.运行 npm install  webpack webpack-cli -D命令，安装webpack相关包</p>
-<p>​        2.在项目根目录中，创建名为 webpack.config.js的webpack配置文件</p>
-<p>​        3.在webpack的配置文件中，初始化如下基本配置：</p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">       <span class="comment">//编译模式</span></span><br><span class="line">       mode: <span class="string">'development'</span><span class="comment">//development   production。mode用来指定构建模式</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-</blockquote>
-<p>​        4.在package.json 配置文件中的 scripts节点下，新增dev脚本如下：</p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>:&#123;</span><br><span class="line">    <span class="string">"dev"</span>:<span class="string">"webpack"</span>  <span class="comment">//script节点下的脚本，可以通过npm run执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</blockquote>
-<p>​        5.在终端中运行 npm run dev 命令，启动 webpack进行项目打包。</p>
-        
-          <a class="article-more-a" href="/2020/04/16/Webpack/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Webpack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Vue路由" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Vue%E8%B7%AF%E7%94%B1/">Vue路由</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/16/Vue%E8%B7%AF%E7%94%B1/" class="archive-article-date">
-  	<time datetime="2020-04-16T08:46:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 实例</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//导入 vue.js vue-router.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//&lt;router-link&gt;是一个组件，该组件用于设置一个导航连接，to 属性为目标地址</span></span><br><span class="line">&lt;router-link to=<span class="string">"/user"</span>&gt;User&lt;<span class="regexp">/router-link&gt; </span></span><br><span class="line"><span class="regexp">&lt;router-link to="/</span>register<span class="string">"&gt;Register&lt;/router-link&gt; </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//&lt;router-view&gt;  路由出口 路由匹配到的组件将渲染到这里</span></span><br><span class="line"><span class="string">&lt;router-view&gt;&lt;/router-view&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">var User =&#123;</span></span><br><span class="line"><span class="string">    template:`&lt;div&gt; &lt;p&gt;User：张三&lt;/p&gt; &lt;/div&gt;`</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">var Register =&#123;</span></span><br><span class="line"><span class="string">    template:`&lt;div&gt; &lt;p&gt;Register：张三&lt;/p&gt; &lt;/div&gt;`</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//创建路由实例对象</span></span><br><span class="line"><span class="string">const router = new VueRouter(&#123;</span></span><br><span class="line"><span class="string">    //所有的路由规则</span></span><br><span class="line"><span class="string">    routes:[</span></span><br><span class="line"><span class="string">        &#123;path:'/user',component: User&#125;,</span></span><br><span class="line"><span class="string">        &#123;path:'/register',component: Register&#125;</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">&#125;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">//创建vm实例</span></span><br><span class="line"><span class="string">const vm = new Vue(&#123;</span></span><br><span class="line"><span class="string">    //指定控制的区域</span></span><br><span class="line"><span class="string">    el:'#app',</span></span><br><span class="line"><span class="string">    data:&#123;&#125;,</span></span><br><span class="line"><span class="string">    //挂载路由实例对象</span></span><br><span class="line"><span class="string">    router: router</span></span><br><span class="line"><span class="string">&#125;)</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/04/16/Vue%E8%B7%AF%E7%94%B1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Vue%E8%B7%AF%E7%94%B1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Element-UI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/16/Element-UI/">Element-UI</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/16/Element-UI/" class="archive-article-date">
-  	<time datetime="2020-04-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>安装依赖包npm i element-ui -S</span><br><span class="line"><span class="number">2.</span>导入 Element-UI相关资源</span><br><span class="line"><span class="comment">//导入组件库</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span>;</span><br><span class="line"><span class="comment">//导入组件相关样式</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span>;</span><br><span class="line"><span class="comment">//配置Vue插件</span></span><br><span class="line">Vue.use(ElementUI);</span><br></pre></td></tr></table></figure>
-</blockquote>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-Element-UI</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/Element-UI/">展开全文 >></a>
         </p>
       
 
@@ -1075,6 +1521,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">EL&JSTL</a>
               </li>
             
             <div class="clearfix"></div>
